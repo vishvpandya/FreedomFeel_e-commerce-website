@@ -1,0 +1,434 @@
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Summary</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        #orderDetails { margin-top: 20px; }
+        .order { margin-bottom: 15px; padding: 10px; border: 1px solid #ccc; }
+        button { margin-top: 20px; padding: 10px; background-color: red; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: darkred; }
+    </style>
+</head>
+<body>
+    <h1>Order Summary</h1>
+    <div id="orderDetails"></div>
+    <button id="deleteOrdersButton">Delete All Orders</button>
+
+    <script>
+        let orders = JSON.parse(localStorage.getItem('orders')) || [];
+
+        // Function to update the displayed order details
+        function updateOrderDetails() {
+            const orderDetailsDiv = document.getElementById('orderDetails');
+            if (orders.length > 0) {
+                const orderList = orders.map((order, index) => `
+                    <div class="order">
+                        <h3>Order ${index + 1}</h3>
+                        <p><strong>Name:</strong> ${order.name}</p>
+                        <p><strong>Address:</strong> ${order.address}</p>
+                        <p><strong>City:</strong> ${order.city}</p>
+                        <p><strong>Number of Packs:</strong> ${order.packs}</p>
+                        <p><strong>Original Cost:</strong> ${order.originalCost} rupees</p>
+                        <p><strong>Delivery Charges:</strong> ${order.deliveryCharges} rupees</p>
+                        <p><strong>Total Cost:</strong> ${order.totalCost} rupees</p>
+                    </div>
+                `).join('');
+                orderDetailsDiv.innerHTML = orderList;
+            } else {
+                orderDetailsDiv.innerHTML = "<p>No orders placed yet.</p>";
+            }
+        }
+
+        // Delete Orders Button
+        document.getElementById('deleteOrdersButton').addEventListener('click', function() {
+            // Clear the orders array
+            orders = [];
+            // Remove orders from localStorage
+            localStorage.removeItem('orders');
+            // Update the display
+            updateOrderDetails();
+        });
+
+        // Initial load of order details
+        window.onload = function() {
+            updateOrderDetails();
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Summary</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        #orderDetails { margin-top: 20px; }
+        .order { margin-bottom: 15px; padding: 10px; border: 1px solid #ccc; }
+        button { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Order Summary</h1>
+    <div id="orderDetails"></div>
+    <button id="deleteOrdersButton">Delete All Orders</button>
+
+    <script>
+        let orders = JSON.parse(localStorage.getItem('orders')) || [];
+
+        // Function to update the displayed order details
+        function updateOrderDetails() {
+            const orderDetailsDiv = document.getElementById('orderDetails');
+            if (orders.length > 0) {
+                const orderList = orders.map((order, index) => `
+                    <div class="order">
+                        <h3>Order ${index + 1}</h3>
+                        <p><strong>Name:</strong> ${order.name}</p>
+                        <p><strong>Address:</strong> ${order.address}</p>
+                        <p><strong>City:</strong> ${order.city}</p>
+                        <p><strong>Number of Packs:</strong> ${order.packs}</p>
+                        <p><strong>Original Cost:</strong> ${order.originalCost} rupees</p>
+                        <p><strong>Delivery Charges:</strong> ${order.deliveryCharges} rupees</p>
+                        <p><strong>Total Cost:</strong> ${order.totalCost} rupees</p>
+                    </div>
+                `).join('');
+                orderDetailsDiv.innerHTML = orderList;
+            } else {
+                orderDetailsDiv.innerHTML = "<p>No orders placed yet.</p>";
+            }
+        }
+
+        // Delete Orders Button
+        document.getElementById('deleteOrdersButton').addEventListener('click', function() {
+            // Clear the orders array
+            orders = [];
+            // Remove orders from localStorage
+            localStorage.removeItem('orders');
+            // Update the display
+            updateOrderDetails();
+        });
+
+        // Initial load of order details
+        updateOrderDetails();
+    </script>
+</body>
+</html>
+
+
+
+
+
+ 
+
+
+
+
+
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Summary</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        #orderDetails { margin-top: 20px; }
+        .order { margin-bottom: 15px; padding: 10px; border: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+    <h1>Order Summary</h1>
+    <div id="orderDetails"></div>
+
+    <script>
+        let orders = JSON.parse(localStorage.getItem('orders')) || [];
+
+        // Function to update the displayed order details
+        function updateOrderDetails() {
+            const orderDetailsDiv = document.getElementById('orderDetails');
+            if (orders.length > 0) {
+                const orderList = orders.map((order, index) => `
+                    <div class="order">
+                        <h3>Order ${index + 1}</h3>
+                        <p><strong>Name:</strong> ${order.name}</p>
+                        <p><strong>Address:</strong> ${order.address}</p>
+                        <p><strong>City:</strong> ${order.city}</p>
+                        <p><strong>Number of Packs:</strong> ${order.packs}</p>
+                        <p><strong>Original Cost:</strong> ${order.originalCost} rupees</p>
+                        <p><strong>Delivery Charges:</strong> ${order.deliveryCharges} rupees</p>
+                        <p><strong>Total Cost:</strong> ${order.totalCost} rupees</p>
+                    </div>
+                `).join('');
+                orderDetailsDiv.innerHTML = orderList;
+            } else {
+                orderDetailsDiv.innerHTML = "<p>No orders placed yet.</p>";
+            }
+        }
+
+        // Initial load of order details
+        updateOrderDetails();
+    </script>
+</body>
+</html> -->
+
+
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Summary</title>
+</head>
+<body>
+   <h1>orders</h1>
+    <div id="orderDetails"></div>
+
+    <script>
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        const name = getQueryParam('name');
+        const address = getQueryParam('address');
+        const packs = getQueryParam('packs');
+        const originalCost = getQueryParam('originalCost');
+        const deliveryCharges = getQueryParam('deliveryCharges');
+        const totalCost = getQueryParam('totalCost');
+
+        document.getElementById('orderDetails').innerHTML = `
+            <p><strong>Name:</strong> ${name}</p>
+            <p><strong>Address:</strong> ${address}</p>
+            <p><strong>Number of Packs:</strong> ${packs}</p>
+            <p><strong>Original Cost:</strong> ${originalCost} rupees</p>
+            <p><strong>Delivery Charges:</strong> ${deliveryCharges} rupees</p>
+            <p><strong>Total Cost:</strong> ${totalCost} rupees</p>
+        `;
+    </script>
+</body>
+</html>
+
+
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Summary</title>
+</head>
+<body>
+    <h1>Your Order Summary</h1>
+    <div id="orderDetails"></div>
+
+    <script>
+        // Function to get URL parameters
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Get the order details from the URL
+        const name = getQueryParam('name');
+        const address = getQueryParam('address');
+        const city = getQueryParam('city');
+        const packs = getQueryParam('packs');
+        const originalCost = getQueryParam('originalCost');
+        const deliveryCharges = getQueryParam('deliveryCharges');
+        const totalCost = getQueryParam('totalCost');
+
+        // Display the order details
+        document.getElementById('orderDetails').innerHTML = `
+            <p>Name: ${name}</p>
+            <p>Address: ${address}</p>
+            <p>City: ${city}</p>
+            <p>You ordered: ${packs} packs</p>
+            <p>Original Cost: ${originalCost} rupees</p>
+            <p>Delivery Charges: ${deliveryCharges} rupees</p>
+            <p>Total Cost: ${totalCost} rupees</p>
+        `;
+    </script>
+</body>
+</html>
+
+
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+</head>
+<body>
+    <style>
+        #con {
+    font-size: 40px;
+    background-color: #001d35;
+    color: #e2e7e6;
+    margin-top: 5rem;
+    border: none;
+    height: 55rem;
+    padding-left: 25%;
+    padding-top: 30rem;
+}
+    </style>
+    <div id="con">
+        Congratulations Your Order is place
+    </div> -->
+    <!-- <div id="orderDetails"></div>
+    <div id="orderDetails"></div>
+
+    <script>
+        // Function to get URL parameters
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Get the order ID from the URL
+        const orderId = getQueryParam('orderId');
+
+        // Display the order details (in a real app, you would fetch these from your server)
+        document.getElementById('orderDetails').innerHTML = `Your order ID is: ${orderId}`;
+
+
+ // Function to get URL parameters
+ function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Get the order details from the URL
+        const packs = getQueryParam('packs');
+        const totalCost = getQueryParam('totalCost');
+
+        // Display the order details
+        document.getElementById('orderDetails').innerHTML = `
+            <p>You ordered: ${packs} packs</p>
+            <p>Total cost: ${totalCost} rupees</p>
+        `; -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head> -->
+    <!-- <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Summary</title>
+</head>
+<body>
+    <h1>Your Order Summary</h1>
+    <div id="orderDetails"></div>
+
+    <script>
+        // Function to get URL parameters
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Get the order details from the URL
+        const packs = getQueryParam('packs');
+        const totalCost = getQueryParam('totalCost');
+        const deliveryCharges = getQueryParam('deliveryCharges');
+
+        // Display the order details
+        document.getElementById('orderDetails').innerHTML = `
+            <p>You ordered: ${packs} packs</p>
+            <p>Delivery Charges: ${deliveryCharges} rupees</p>
+            <p>Total cost: ${totalCost} rupees</p>
+        `;
+    </script>
+</body>
+</html> -->
+
+
+
+
+
+
+<!-- 
+
+    </script>
+</body>
+</html> -->
